@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+conda-env/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Datasets, checkpoints, and external repositories
+data/**
+!data/.gitkeep
+pretrain_weights/**
+!pretrain_weights/.gitkeep
+work_dir/**
+!work_dir/.gitkeep
+detectron2/
+detrex/
+
+# Experiment outputs
+outputs/
+output/
+wandb/
+visualization/
+visualize/
+runs/
+logs/
+*.log
+
+# Large artifacts
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.whl
+
+# Temporary files
+tmp*/
+scratch/
+.codex_tmp/
