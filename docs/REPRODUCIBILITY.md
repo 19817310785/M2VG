@@ -46,9 +46,19 @@ files.
 
 Download the BEiT-3 pretrained backbone files and tokenizer from the
 [official BEiT-3 release](https://github.com/microsoft/unilm/tree/master/beit3)
-and place them under `pretrain_weights/`. The fine-tuned M2VG checkpoint to
-configuration mapping will be added after the compatible release artifacts are
-confirmed.
+and place them under `pretrain_weights/`.
+
+M2VG is compatible with the final InstanceVG checkpoints. Download the files
+from the [InstanceVG model release](https://huggingface.co/Dmmm997/InstanceVG),
+place them under `work_dir/`, and use the matching M2VG configuration:
+
+| M2VG configuration | Compatible checkpoint |
+| --- | --- |
+| `configs/gres/M2VG-grefcoco.py` | `InstanceVG-grefcoco.pth` |
+| `configs/refcoco/M2VG-B-refcoco/M2VG-B-refcoco.py` | `InstanceVG-B-refcoco.pth` |
+| `configs/refcoco/M2VG-L-refcoco/M2VG-L-refcoco.py` | `InstanceVG-L-refcoco.pth` |
+| `configs/refzom/M2VG-refzom.py` | `InstanceVG-refzom.pth` |
+| `configs/rrefcoco/M2VG-rrefcoco.py` | `InstanceVG-rrefcoco.pth` |
 
 ## Entry points
 
