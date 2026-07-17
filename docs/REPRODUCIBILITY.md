@@ -37,8 +37,18 @@ pretrain_weights/
 work_dir/
 ```
 
-The public README will provide the release URLs, exact dataset layout, and
-checkpoint-to-configuration mapping when those materials are finalized.
+Prepare the MS-COCO `train2014` images from the
+[official COCO download page](https://cocodataset.org/#download). Download the
+referring-expression and foreground annotations from the
+[InstanceVG data release](https://huggingface.co/datasets/Dmmm997/InstanceVG_Data)
+and arrange them under `data/seqtr_type/` as required by the configuration
+files.
+
+Download the BEiT-3 pretrained backbone files and tokenizer from the
+[official BEiT-3 release](https://github.com/microsoft/unilm/tree/master/beit3)
+and place them under `pretrain_weights/`. The fine-tuned M2VG checkpoint to
+configuration mapping will be added after the compatible release artifacts are
+confirmed.
 
 ## Entry points
 
