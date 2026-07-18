@@ -3,28 +3,26 @@
 ## Abstract
 
 Generalized visual grounding extends conventional visual grounding to
-one-to-zero, one-to-one, and one-to-many scenarios. It requires models to
-localize referred targets and determine whether a language expression is
-satisfiable by the image content. However, existing methods mainly rely on
-target matching between text and image regions, making them vulnerable to the
-target-presence assumption. They may predict incorrect regions when local
-semantic cues match the expression but the global language constraints are not
-satisfied.
+one-to-zero, one-to-one, and one-to-many scenarios. Beyond localizing referred
+instances, a model must determine whether a referring expression is supported by
+the image. Existing approaches primarily optimize text-region matching and can
+therefore return plausible but incorrect regions when a local category cue
+matches while attribute, spatial, or relational conditions are violated.
 
-To address this problem, we propose M2VG, an expression satisfiability modeling
-framework for generalized visual grounding. M2VG reformulates the task as
-language constraint verification, where an expression is satisfiable only when
-its category, attribute, spatial, and relational constraints are fully supported
-by object instances in the image. Specifically, we introduce dynamic focus
-negative sample mining to construct reliable unsatisfiable image-expression
-pairs through target removal and semantic mismatch. We further design an
-adaptive word-aware residual modulation module and an auxiliary existence branch
-to enhance image-conditioned token representations and predict expression-level
-existence probability. Experiments show that M2VG achieves competitive
-performance on generalized referring expression comprehension, generalized
-referring expression segmentation, and conventional referring expression
-localization. It improves target-absence recognition while maintaining strong
-localization and segmentation performance.
+We propose M2VG, an expression satisfiability modeling framework for generalized
+visual grounding. M2VG treats a referring expression as a set of visual
+conditions and learns to reject predictions when the image does not provide
+sufficient joint evidence for these conditions. To construct informative
+no-target supervision, Dynamic Focus Negative Sample Mining generates reliable
+unsatisfiable image-expression pairs through target removal and semantic
+mismatch under reliability constraints. We further introduce Adaptive
+Word-aware Residual Modulation to refine token representations with image
+context before query generation, and an auxiliary existence branch that
+aggregates decoded instance-query evidence to estimate expression-level
+existence. Experiments on generalized referring expression comprehension,
+generalized referring expression segmentation, and conventional referring
+expression comprehension show that M2VG improves no-target recognition while
+maintaining competitive localization and segmentation performance.
 
 **Keywords:** visual grounding; generalized visual grounding; referring
 expression comprehension; referring expression segmentation; expression

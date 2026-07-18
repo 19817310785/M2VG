@@ -40,7 +40,7 @@ work_dir/
 Prepare the MS-COCO `train2014` images from the
 [official COCO download page](https://cocodataset.org/#download). Download the
 referring-expression and foreground annotations from the
-[InstanceVG data release](https://huggingface.co/datasets/Dmmm997/InstanceVG_Data)
+[annotation release](https://huggingface.co/datasets/Dmmm997/InstanceVG_Data)
 and arrange them under `data/seqtr_type/` as required by the configuration
 files.
 
@@ -48,17 +48,16 @@ Download the BEiT-3 pretrained backbone files and tokenizer from the
 [official BEiT-3 release](https://github.com/microsoft/unilm/tree/master/beit3)
 and place them under `pretrain_weights/`.
 
-M2VG is compatible with the final InstanceVG checkpoints. Download the files
-from the [InstanceVG model release](https://huggingface.co/Dmmm997/InstanceVG),
-place them under `work_dir/`, and use the matching M2VG configuration:
+Place the final M2VG checkpoints under `work_dir/` and use the matching M2VG
+configuration:
 
 | M2VG configuration | Compatible checkpoint |
 | --- | --- |
-| `configs/gres/M2VG-grefcoco.py` | `InstanceVG-grefcoco.pth` |
-| `configs/refcoco/M2VG-B-refcoco/M2VG-B-refcoco.py` | `InstanceVG-B-refcoco.pth` |
-| `configs/refcoco/M2VG-L-refcoco/M2VG-L-refcoco.py` | `InstanceVG-L-refcoco.pth` |
-| `configs/refzom/M2VG-refzom.py` | `InstanceVG-refzom.pth` |
-| `configs/rrefcoco/M2VG-rrefcoco.py` | `InstanceVG-rrefcoco.pth` |
+| `configs/gres/M2VG-grefcoco.py` | `M2VG-grefcoco.pth` |
+| `configs/refcoco/M2VG-B-refcoco/M2VG-B-refcoco.py` | `M2VG-B-refcoco.pth` |
+| `configs/refcoco/M2VG-L-refcoco/M2VG-L-refcoco.py` | `M2VG-L-refcoco.pth` |
+| `configs/refzom/M2VG-refzom.py` | `M2VG-refzom.pth` |
+| `configs/rrefcoco/M2VG-rrefcoco.py` | `M2VG-rrefcoco.pth` |
 
 ## Entry points
 
