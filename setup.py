@@ -2,10 +2,17 @@ from setuptools import find_packages, setup
 from torch.utils.cpp_extension import BuildExtension
 
 
-def readme():
-    with open("README.md", encoding="utf-8") as f:
-        content = f.read()
-    return content
+def long_description():
+    """Keep editable installation independent of the repository README.
+
+    The public README is intentionally withheld while the anonymous submission
+    materials are being prepared.  Package installation must remain usable in
+    the meantime.
+    """
+    return (
+        "M2VG is a multi-task visual grounding framework for referring "
+        "expression understanding."
+    )
 
 
 version_file = "m2vg/version.py"
@@ -96,18 +103,17 @@ if __name__ == "__main__":
     setup(
         name="M2VG",
         version=get_version(),
-        description="",
-        long_description=readme(),
+        description="A multi-task visual grounding framework.",
+        long_description=long_description(),
         long_description_content_type="text/markdown",
-        author="ming dai",
-        author_email="869906992@qq.com",
+        author="M2VG Authors",
         keywords="visual grounding",
-        url="https://github.com/Dmmm1997/M2VG",
+        url="https://github.com/19817310785/M2VG",
         packages=find_packages(exclude=("configs", "tools")),
         include_package_data=True,
         classifiers=[
             "Development Status :: 5 - Production/Stable",
-            "License :: OSI Approved :: Apache Software License",
+            "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent",
             "Programming Language :: Python :: 3",
             "Programming Language :: Python :: 3.6",
@@ -115,7 +121,7 @@ if __name__ == "__main__":
             "Programming Language :: Python :: 3.8",
             "Programming Language :: Python :: 3.9",
         ],
-        license="Apache License 2.0",
+        license="MIT",
         install_requires=parse_requirements("requirements.txt"),
         ext_modules=[],
         cmdclass={"build_ext": BuildExtension},
