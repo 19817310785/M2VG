@@ -1,6 +1,6 @@
 # Third-party notices
 
-M2VG is an anonymous research-code release. Its implementation builds on and
+M2VG is a research-code release. Its implementation builds on and
 modifies components from the following open-source projects:
 
 - [InstanceVG](https://github.com/Dmmm1997/InstanceVG)
